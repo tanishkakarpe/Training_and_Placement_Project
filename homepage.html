@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            place-items: center;
+            background-image: url('tan.jpg');
+            background-size: cover;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .switch {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .switch a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <form id="loginForm" action="page1.html" method="post">
+        <label for="loginUsername">Username</label>
+        <input type="text" id="loginUsername" name="username" required>
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="password" required>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <div class="switch">
+        <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></p>
+    </div>
+</div>
+
+<div class="container" style="display: none;" id="signupContainer">
+    <h2>Signup</h2>
+    <form id="signupForm" action="page6.html" method="post">
+        <label for="signupUsername">Username</label>
+        <input type="text" id="signupUsername" name="username" required>
+
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" name="email" required>
+
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" name="password" required>
+
+        <input type="submit" value="Signup">
+    </form>
+
+    <div class="success-message" id="successMessage">
+        Sign up successful!
+    </div>
+
+    <div class="switch">
+        <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+    </div>
+</div>
+
+<script>
+    function toggleForm() {
+        var loginContainer = document.getElementById("loginForm");
+        var signupContainer = document.getElementById("signupContainer");
+
+        if (loginContainer.style.display === "none") {
+            loginContainer.style.display = "block";
+            signupContainer.style.display = "none";
+        } else {
+            loginContainer.style.display = "none";
+            signupContainer.style.display = "block";
+        }
+    }
+
+    // Function to show the success message after signup
+    function showSuccessMessage() {
+        var successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "block";
+    }
+
+    // Check if there's a success message query parameter in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const successParam = urlParams.get('success');
+    if (successParam === 'true') {
+        showSuccessMessage();
+    }
+</script>
+
+</body>
+</html>
