@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Company information</title>
+<link rel="stylesheet" href="styles.css">
+<head>
+<style>
+h1 { font-size: 45px;
+  font-family:Algerian;
+}
+body{
+    display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background-color:lightgrey;
+  background-size: cover;
+  
+
+}
+</style>
+</head>
+<body>
+ 
+<h1>Company Visit to campus </h1>
+
+</div>
+</body>
+<head>
+    <style>
+        .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style for individual image */
+.image {
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+
+/* Style for information display */
+#info-display {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="image1.jpg" alt="Image 1" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 6.5 in their graduation degree">
+        <img src="image2.jpg" alt="Image 2" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 6.5 in their graduation degree">
+        <img src="image3.jpg" alt="Image 3" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 7.5 in their graduation degree">
+        <img src="image4.jpg" alt="Image 4" class="image" data-info="class 10:- 70% on their and class 12:-60% and  CGPA = 6.0 in their graduation degree">
+        <img src="image5.jpg" alt="Image 5" class="image" data-info="class 10:- 60% on their and class 12:-750% and  CGPA = 6.0 in their graduation degree">
+        <img src="image6.jpg" alt="Image 6" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 6.0 in their graduation degree">
+        <img src="image7.jpg" alt="Image 7" class="image" data-info="class 10:- 65% on their and class 12:-60% and  CGPA = 8.5 in their graduation degree">
+        <img src="image8.jpg" alt="Image 8" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 8.5 in their graduation degree">
+        <img src="image9.jpg" alt="Image 9" class="image" data-info="class 10:- 60% on their and class 12:-750% and  CGPA = 6.5 in their graduation degree">
+        <img src="image10.jpg" alt="Image 10" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 6.5 in their graduation degree">
+        <img src="image11.jpg" alt="Image 11" class="image" data-info="class 10:- 80% on their and class 12:-60% and  CGPA = 8.0 in their graduation degree">
+        <img src="image12.jpg" alt="Image 12" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 8.0 in their graduation degree">
+        <img src="image13.jpg" alt="Image 13" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 6.5 in their graduation degree">
+        <img src="image14.jpg" alt="Image 14" class="image" data-info="class 10:- 80% on their and class 12:-60% and  CGPA = 6.5 in their graduation degree">
+        <img src="image15.jpg" alt="Image 15" class="image" data-info="class 10:- 60% on their and class 12:-80% and  CGPA = 6.5 in their graduation degree">
+        <img src="image16.jpg" alt="Image 16" class="image" data-info="class 10:- 70% on their and class 12:-60% and  CGPA = 8.5 in their graduation degree">
+        <img src="image17.jpg" alt="Image 17" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 6.5 in their graduation degree">
+        <img src="image18.jpg" alt="Image 18" class="image" data-info="class 10:- 60% on their and class 12:-60% and  CGPA = 9.0 in their graduation degree">
+    </div>
+    
+    <div id="info-display"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get references to image elements and info-display
+            const images = document.querySelectorAll(".image");
+            const infoDisplay = document.getElementById("info-display");
+        
+            // Add click event listener to each image
+            images.forEach(image => {
+                image.addEventListener("click", function() {
+                    // Get the information from data-info attribute
+                    const info = this.getAttribute("data-info");
+                    // Update info-display content
+                    infoDisplay.innerHTML = info;
+                    // Show info-display
+                    infoDisplay.style.display = "block";
+                });
+            });
+        
+            // Add click event listener to hide info-display when clicked
+            infoDisplay.addEventListener("click", function() {
+                this.style.display = "none";
+            });
+        });
+</script>
+        
+    </body>
+    </html>

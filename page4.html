@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Information on Link Click</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgrey;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Terms And Conditions</h1>
+        <a href="#" onclick="toggleInfo('info1')">Pre Placement Processes</a>
+        <div id="info1" class="info">
+            <p>1. Timeliness:
+                - Students must be on time for all placement-related events.
+                - Latecomers may be barred from further processes.
+             <br>
+             2. Attendance at PPT:
+                - Students interested in a company must attend its Pre-Placement Talk (PPT).
+                - Information about PPTs will be communicated in advance.
+                - Only registered students who attend the PPT can apply to the company.
+             <br>
+             3. Application to Company:
+                - Students must apply within the specified period after attending the PPT.
+                - Late applications are not accepted.
+             <br>
+             4. Application to Multiple Companies:
+                - Students can apply to multiple companies.
+                - Once offered a job, they cannot apply to more companies.
+                - The Placement Team informs other companies about student placements.</p>
+        </div>
+        <br>
+        <a href="#" onclick="toggleInfo('info2')">Selection Process</a>
+        <div id="info2" class="info">
+            <p>1. Immediate Acceptance: Students must accept the first job offer immediately, with no alterations allowed later.<br>
+                2. Blacklisting: Failure to accept or retracting an accepted offer results in potential blacklisting and withholding of academic documents.<br>
+                3. Salary Negotiation: Negotiation allowed only if company indicates flexibility, otherwise no negotiation permitted.<br>
+                4. Missed Interviews: Missing any part of a company's selection process may lead to exclusion from further consideration, with potential consequences and case-by-case evaluation by the placement cell.</p>
+        </div>
+        <br>
+        <a href="#" onclick="toggleInfo('info3')">Regular And Dream Offers</a>
+        <div id="info3" class="info">
+            <p>1. Each student is allowed one regular offer and one dream offer.<br>
+                2. If a student gets placed in an empaneled company, they can only pursue another offer if it's double the package offered, with discretion from TnP Cell.<br>
+                3. Students placed in Pan India Hiring Process can pursue a second empaneled company offer, but must join if selected.<br>
+                4. Students in Centre of Excellence programs can only pursue another offer if it's double the current package, or as allowed by TnP Cell in challenging situations.<br>
+                5. Offers up to 7 LPA are regular; above 7 LPA are dream offers.<br>
+                6. If a student gets a dream offer, they can't pursue any other regular/dream opportunity unless decided by TnP Cell.<br>
+                7. Dream offer determination may also consider profile, future prospects, and other factors decided by TnP Cell.</p>
+        </div>
+        <br>
+        <a href="#" onclick="toggleInfo('info4')">Post Placement Process</a>
+        <div id="info4" class="info">
+            <p>Post- Placement Process<br>
+
+                • Employment Formalities
+                Selected students shall go through all employment formalities, as outlined by the company. This could include medical tests, visits to the company and other prescribed formalities.
+                <br>
+                • Offer Letters
+                Students shall coordinate with the Placement Department for their offer letters sent by the companies. It is common for companies to send the offer letters to the Institute, several months after placements. Students must be patient and be in touch with the Placement Team for the same.
+                - Any discrepancy in the offer letter needs to be resolved directly between the student and the company, since several matters are discussed directly between the student and the company, during the interview process, which the Placement Team could be unaware of.
+                - Only in severe cases of discrepancy, should the Placement Team be requested to intervene.</p>
+        </div>
+        <br>
+        <a href="#" onclick="toggleInfo('info5')">Other Guidelines</a>
+        <div id="info5" class="info">
+            <p>Sure, here's a summary:<br>
+
+                1. Code of Conduct: Students must act professionally, communicate through the Placement Cell, avoid unsolicited language, and adhere to company guidelines. The Placement Cell may take action if guidelines are violated.<br>
+                
+                2. Dress Code: Business formals are mandatory for all interactions with companies, including online or offline sessions.<br>
+                
+                3. Timelines for Joining: Students join companies only after completing their course in May/June of the subsequent year. Early joining may be allowed in some cases.<br>
+                
+                4. Onboarding Complexity: Empaneled company-placed students wait three quarters starting from June every year before onboarding. They can apply for other placements if not onboarded in the first quarter.<br>
+                
+                5. Withdrawal Notice: Students not interested in placement must inform the Placement Cell at the beginning of the academic year through a signed letter in the prescribed format.</p>
+        </div>
+        <br>
+        <a href="#" onclick="toggleInfo('info6')">Best Pratices for Students</a>
+        <div id="info6" class="info">
+            <p>1. Strategy and Organization:Develop a plan early on, form a Placement Forum, and appoint a Secretary to coordinate efforts. Have a single point of contact for the Career Management Center (CMC) to ensure an organized approach.<br>
+
+                2. Communication with Placement Committee: Use the class Placement Committee as a liaison between students and the Placement Cell. Direct general queries, applications, and follow-ups through them.<br>
+                
+                3. Stay Informed:Check the Placement notice board and official social platforms daily, especially during placement season, to avoid missing important notices and updates.<br>
+                
+                4. Prompt Follow-up:Follow up promptly with the Placement Cell based on company feedback to maintain candidacy and not lose opportunities to other students.<br>
+                
+                5. Leverage Alumni Networks:Stay connected with alumni working in desired companies throughout the year, not just during placement season. Alumni can provide valuable insights and connections.<br>
+                
+                6. Maximize Internship Opportunities: Summer and other internships offer great chances to make an impact and secure Pre-Placement Offers. Make the most of these experiences to enhance your career prospects.<br>
+                
+                7. Engage in Multiple Events:Interact with companies at various events such as case competitions, guest lectures, industry visits, and club activities to broaden your network and exposure to potential employers.</p>
+        </div>
+        <br>
+        <a href="#" onclick="toggleInfo('info7')">Refundable Security Deposit for Placement Pre-Placement Process</a>
+        <div id="info7" class="info">
+            <p>Certainly! Here's a condensed version of the key points:<br>
+
+                1. Students must deposit Rs. 5000 as a security deposit for placement, refundable after the final year, minus T&P process costs or fines.<br>
+                2. Deposit will be forfeited if students:<br>
+                   - Apply for a job but don't attend.<br>
+                   - Attend part of the interview process but don't complete it.<br>
+                   - Contact companies directly without Placement Cell consent.<br>
+                   - Reject an offer after selection.<br>
+                   - Engage in misconduct during the placement process.<br>
+                3. Refund process:<br>
+                   - Placed students apply for refund after 6 months of joining, Monday to Saturday, 11 am to 1 pm.<br>
+                   - Submit application with evidence of joining the company.<br>
+                   - Provide original & photocopy of receipt.<br>
+                   - If company cancels joining, provide evidence.<br>
+                   - After T&P approval, submit to accounts' section for processing.<br>
+                   - Refund via cheque, after deductions for fees or fines related to placement.</p>
+        </div>
+        <br>
+    </div>
+
+    <script>
+        function toggleInfo(id) {
+            var info = document.getElementById(id);
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
